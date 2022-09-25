@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<comment>Proof Of Concept</comment>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NFC Vending Machine</title>
+    <link href="main.css" rel="stylesheet" />
+    <script src="websocket.js"></script>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="vend-container">
+        <div class="vend-outer">
+          <div class="scanning" id="scanning">
+            <div class="inner" id="inner"></div>
+          </div>
+          <div class="pinpad" id="pinpad"></div>
+          <div class="display-box" id="displayBox">
+            <div class="display" id="blue">Blue (10)</div>
+            <div class="display" id="red">Red (10)</div>
+            <div class="display" id="green">Green (10)</div>
+            <div class="display" id="yellow">Yellow (10)</div>
+
+          </div>
+          <div id="welcomeMessage" class="welcomeMessage">
+                <div id="space" class="space">
+                    <p>Hello! Welcome to Drug Dropper! :)</p>
+                </div>
+          </div>
+          <div class="vend-back">
+            <div class="product-row">
+              <div class="soda-box pepsi-box" id="pepsiBox">
+                <div class="soda pepsi" id="pepsi">
+                </div>
+              </div>
+              <div class="price-box pepsi-price">
+              </div>
+              <div class="tag tag-one">
+                <p>Blue</p>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-row">
+              <div class="soda-box coke-box" id="cokeBox">
+                <div class="soda coke" id="coke">
+                </div>
+              </div>
+              <div class="price-box coke-price">
+              </div>
+              <div class="tag tag-two">
+                <p>Red</p>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-row">
+              <div class="soda-box sprite-box" id="spriteBox">
+                <div class="soda sprite" id="sprite">
+                </div>
+              </div>
+              <div class="price-box sprite-price">
+              </div>
+              <div class="tag tag-three">
+                <p>Green</p>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-row">
+              <div class="soda-box fanta-box" id="fantaBox">
+                <div class="soda fanta" id="fanta">
+                </div>
+              </div>
+              <div class="price-box fanta-price">
+              </div>
+              <div class="tag tag-four">
+                <p>Yellow</p>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-row">
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+              <div class="spiral">
+                <div class="inner-spiral">
+                  <div class="inner-spiral">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vend-glass"></div>
+          </div>
+          <div class="touch-pad" id="touch-pad">
+            Scan here!
+          </div>
+          <div class="grab-box">
+            <div class="medicine" id="medicine"></div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </body>
+</html>
